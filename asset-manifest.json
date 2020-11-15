@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "./static/css/main.cc8ea0f7.chunk.css",
-    "main.js": "./static/js/main.f273201d.chunk.js",
-    "main.js.map": "./static/js/main.f273201d.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.c5068bda.js",
-    "runtime-main.js.map": "./static/js/runtime-main.c5068bda.js.map",
-    "static/js/2.544d636f.chunk.js": "./static/js/2.544d636f.chunk.js",
-    "static/js/2.544d636f.chunk.js.map": "./static/js/2.544d636f.chunk.js.map",
-    "static/js/3.d93fc8e6.chunk.js": "./static/js/3.d93fc8e6.chunk.js",
-    "static/js/3.d93fc8e6.chunk.js.map": "./static/js/3.d93fc8e6.chunk.js.map",
-    "index.html": "./index.html",
-    "static/css/main.cc8ea0f7.chunk.css.map": "./static/css/main.cc8ea0f7.chunk.css.map",
-    "static/js/2.544d636f.chunk.js.LICENSE.txt": "./static/js/2.544d636f.chunk.js.LICENSE.txt",
-    "static/media/x_cross.adfca78c.png": "./static/media/x_cross.adfca78c.png"
+    "main.css": "/zothacks2020/static/css/main.f5428794.chunk.css",
+    "main.js": "/zothacks2020/static/js/main.2f3b5d40.chunk.js",
+    "main.js.map": "/zothacks2020/static/js/main.2f3b5d40.chunk.js.map",
+    "runtime-main.js": "/zothacks2020/static/js/runtime-main.b2ade4b3.js",
+    "runtime-main.js.map": "/zothacks2020/static/js/runtime-main.b2ade4b3.js.map",
+    "static/js/2.4895170f.chunk.js": "/zothacks2020/static/js/2.4895170f.chunk.js",
+    "static/js/2.4895170f.chunk.js.map": "/zothacks2020/static/js/2.4895170f.chunk.js.map",
+    "static/js/3.d93fc8e6.chunk.js": "/zothacks2020/static/js/3.d93fc8e6.chunk.js",
+    "static/js/3.d93fc8e6.chunk.js.map": "/zothacks2020/static/js/3.d93fc8e6.chunk.js.map",
+    "index.html": "/zothacks2020/index.html",
+    "static/css/main.f5428794.chunk.css.map": "/zothacks2020/static/css/main.f5428794.chunk.css.map",
+    "static/js/2.4895170f.chunk.js.LICENSE.txt": "/zothacks2020/static/js/2.4895170f.chunk.js.LICENSE.txt",
+    "static/media/spotify.91a40dc3.png": "/zothacks2020/static/media/spotify.91a40dc3.png",
+    "static/media/x_cross.adfca78c.png": "/zothacks2020/static/media/x_cross.adfca78c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c5068bda.js",
-    "static/js/2.544d636f.chunk.js",
-    "static/css/main.cc8ea0f7.chunk.css",
-    "static/js/main.f273201d.chunk.js"
+    "static/js/runtime-main.b2ade4b3.js",
+    "static/js/2.4895170f.chunk.js",
+    "static/css/main.f5428794.chunk.css",
+    "static/js/main.2f3b5d40.chunk.js"
   ]
 }
