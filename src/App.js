@@ -6,12 +6,13 @@ import SwipingPage from './pages/SwipingPage/SwipingPage';
 function App() {
 	return (
 		<Router basename={process.env.PUBLIC_URL}>
-			<Route exact path="/">
+			<Route exact path='/'>
 				<Login />
 			</Route>
-			<Route exact path="/app">
+			<Route exact path='/app'>
 				<SwipingPage />
 			</Route>
+			
 		</Router>
 	);
 }

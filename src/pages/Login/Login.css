@@ -5,12 +5,9 @@
     place-content: center;
     text-align:center;
 
-    
 }
 
 .login-card { 
-
-    /*background:#1db94fc7;*/
 
     overflow: auto;
     height: 60vh;
@@ -29,8 +26,7 @@
 
 }
 
-
-/* used https://www.gradient-animator.com */
+/* Used https://www.gradient-animator.com */
 @-webkit-keyframes title-card {
     0%{background-position:75% 0%}
     50%{background-position:26% 100%}
@@ -47,9 +43,10 @@
     100%{background-position:75% 0%}
 }
 
-
 p {
+
     padding: 10px;
+
 }
 
 .landing-page-title {
@@ -58,7 +55,9 @@ p {
     font-size: 50px;
     padding: 20px 20px 5px 20px;
     font-family: 'Leckerli One', cursive;
+
 }
+
 button {
 
     border: none;
@@ -86,17 +85,17 @@ button {
     color: rgba(32, 30, 30, 0.904);
     font-family: 'Unica One', cursive;
 
-
-    
-
 }
 
 #spotify-icon{
     
     height: 40px;
     width: 40px;
+
 }
 
 button:hover{
+
     background-color: #298148;
+
 }

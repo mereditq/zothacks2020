@@ -4,9 +4,8 @@ import './SongCard.css';
 const SongCard = ({stack, songInfo}) => {
     const cardRef = useRef(null);
 
-    
     let imgURL = songInfo.album.images[0].url;
-    let artists = songInfo.artists[0].name;
+    let artists = songInfo.artists;
     console.log(songInfo);
 
     useEffect(() => {
@@ -23,19 +22,17 @@ const SongCard = ({stack, songInfo}) => {
             
             <a rel="noopener noreferrer" href={songInfo.external_urls.spotify} target="_blank"><img id="album-covers" src={imgURL} /> </a>
             <p class = "artists" id="artists-title"> artist(s) </p>
-            <p class = "artists" id="artists">{artists}</p>
+            <p class = "artists" id="artists">{artists.map(artist => {
+                return (
+                    <div class ="album" id ="artists">
+                        {artist.name}
+                    </div>
+                );
+            })}</p>
             <p class = "album" id="album-title">album</p> 
             <p class = "album" id="album-name"> {songInfo.album.name}</p>
-            
-            
- 
         </li>
     )
 }
-
-/* 
-<p>{songInfo.artists}</p> 
-<p>{songInfo.external_urls}</p> 
-*/
 
 export default SongCard;

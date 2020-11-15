@@ -16,13 +16,11 @@ const SwipingPage = () => {
     const [songArray, setSongArray] = useState(null);
     const [likedSongs, setLikedSongs] = useState([]);
     let history = useHistory();
-    // use the spotify api
-    // const [numOfSeenCards, setNumOfSeenCards] = useState(0);
     const stack = Stack();
 
     stack.on('throwout', (event) => {
         let swipedDirection = (event.throwDirection == Direction.LEFT ? 'left' : 'right');
-        // if statement if swipedDirection === 'right'
+
         if (swipedDirection === 'right'){
             setLikedSongs([...likedSongs, event.target.id]);
             
@@ -30,21 +28,11 @@ const SwipingPage = () => {
         songArray.pop();
         setSongArray([...songArray]);
         
-        // setNumOfSeenCards(numOfSeenCards + 1);
     });
-    stack.on('throwin', (event) => {
-        // console.log(event);
-        // setNumOfSeenCards(numOfSeenCards - 1);
-    });
-
-    // useEffect(()=> {
-    //     if(numOfSeenCards >= songArray.length) return;
-
-    // }, [numOfSeenCards]);
 
     useEffect(() => {
+        // Extract access token from the hash
         let firstHashItem = location.hash.split('&')[0];
-        //extract access token from the hash (remember to do this)
         let access_token = firstHashItem.split('=')[1];
         console.log(access_token)
 
@@ -53,14 +41,13 @@ const SwipingPage = () => {
         spotifyApi.getUserPlaylists().then(
             function (playlistList) {
                 
+                // If no playlists exist, let the songArray be empty
                 if (playlistList.items.length === 0){
                     setSongArray('empty');
                     return;
                 }
                 
-                // check playlist length
-                // console.log('user playlist list', playlistList);
-                // extract a random playlist id and set randomPlaylistID to it
+                // Extract a random playlist id and set randomPlaylistID to it
                 let possiblePlaylistIndeces = playlistList.items.length;
 
                 let randomPlaylistId = null;
@@ -73,29 +60,14 @@ const SwipingPage = () => {
                     }
                 }
                 
-                // let randomPlaylistId;
+                // If the playlist has no songs, get songs from top 50 in the US;
                 if (randomPlaylistId === null){
-                // gets top songs
                     randomPlaylistId = "37i9dQZEVXbMDoHDwVN2tF";
                 }
-                /*else{
-                    
-                    let selectedIndex = Math.floor(Math.random() * possiblePlaylistIndeces);
-                    do{
-                        selectedIndex = Math.floor(Math.random() * possiblePlaylistIndeces);
-                    } while (playlistList.items[selectedIndex].tracks.total = 0);
-                }
-                    randomPlaylistId = playlistList.items[selectedIndex].id;*/
-                // git init .
-                // git add .
-                // git commit -m "initial commit"
-                // git config --global user.name "ryan yang"
-                // git config --global user.email "youremailyoulogginnedtogithubwith@gmail.com"
 
                 spotifyApi.getPlaylist(randomPlaylistId)
                 .then(function(playlistData) {
-                    // console.log('User playlist', playlistData);
-                    //extract random artists and put it into pool for seeding
+                    // Extract random artists and put it into a pool for seeding
                     let artistIDSet = new Set();
                     let trackIndex = 0;
                     while (artistIDSet.size <= 5 && trackIndex < playlistData.tracks.items.length){
@@ -104,12 +76,11 @@ const SwipingPage = () => {
                         }
                         ++trackIndex;
                     }
-                    // console.log(artistIDSet);
 
-                    //convert set to array
+                    // Convert the set to an array
                     let artistIDs = Array.from(artistIDSet);
 
-                    // right here
+                    // Get the recommended songs
                     spotifyApi.getRecommendations({
                         min_energy: 0.4,
                         seed_artists: artistIDs.slice(0,4),
@@ -125,11 +96,10 @@ const SwipingPage = () => {
             },
             function (err) {
                 console.error(err);
-                // print out the error message
+                // If the token expires, redirect to the login page
                 if (err.statusText === 'Unauthorized') {
                     history.push('/')
                 }
-                // redirect to home
             }
         );
     }, []);
@@ -138,12 +108,11 @@ const SwipingPage = () => {
         if(artistInformation === null || artistInformation === 'empty') return;
         console.log("ARTISTINFORMATION HAS CHANGED", artistInformation);
         setSongArray(artistInformation.tracks);
-        // setSongArray([artistInformation.tracks[0]]);
     }, [artistInformation]);
 
 
     if(songArray === null) return (<div></div>);
-    if(songArray === 'empty') return (<div >yo make a playlist bro</div>);
+    if(songArray === 'empty') return (<div >You have no playlists! Create one on spotify to use the app!</div>);
     return (
         <div className="swiping-page--wrapper">
             <img id = "check-mark" src={CheckMark} alt="green check mark"></img>
@@ -158,10 +127,10 @@ const SwipingPage = () => {
 					})}
 				</ul>
 			</div>
-            {songArray?.length === 0 && <Conclusion likedSongs={likedSongs}/>}
+            {songArray?.length === 0 && <Conclusion likedSongs={likedSongs} spotifyApi={spotifyApi}/>}
         </div>
     )
 }
-// HOW TO DEPLOY TO GITHUBP AGES
+// HOW TO DEPLOY TO GITHUB PAGES
 // https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 export default SwipingPage;

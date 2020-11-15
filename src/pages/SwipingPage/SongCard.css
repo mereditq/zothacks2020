@@ -1,6 +1,7 @@
 .song-card--wrapper {
 
     padding: 5px;
+
 }
 
 #album-covers {
@@ -12,34 +13,44 @@
 }
 
 .album{
+
     font-family: 'Unica One', cursive;
+
 }
 
 #album-title{
+
     font-size: 3.0vh;
     font-weight: 600;
     padding-bottom:0px;
+
 }
 
 #artists-title{
+
     font-size: 3.0vh;
     font-weight:600;
     padding-bottom:0px;
+
 }
 
 .artists{
+
     font-family: 'Unica One', cursive;
     
 }
 
 #artists{
+
     font-size: 2.5vh;
     padding-top: 0px;
     line-height:3vh;
+
 }
 
 
 #id-name{
+
     font-size: 4.0vh;
     font-family: 'Unica One', cursive;
     line-height:3.4vw;
@@ -48,8 +59,10 @@
 }
 
 #album-name{
+
     padding-top: 0px;
     font-size: 2.5vh;
     font-family: 'Unica One', cursive;
     line-height:3vh;
+    
 }
