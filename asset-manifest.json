@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/mereditq.github.io/zothacks2-2-/static/css/main.d2efb853.chunk.css",
-    "main.js": "/mereditq.github.io/zothacks2-2-/static/js/main.1de22a36.chunk.js",
-    "main.js.map": "/mereditq.github.io/zothacks2-2-/static/js/main.1de22a36.chunk.js.map",
-    "runtime-main.js": "/mereditq.github.io/zothacks2-2-/static/js/runtime-main.aad24c4f.js",
-    "runtime-main.js.map": "/mereditq.github.io/zothacks2-2-/static/js/runtime-main.aad24c4f.js.map",
-    "static/js/2.544d636f.chunk.js": "/mereditq.github.io/zothacks2-2-/static/js/2.544d636f.chunk.js",
-    "static/js/2.544d636f.chunk.js.map": "/mereditq.github.io/zothacks2-2-/static/js/2.544d636f.chunk.js.map",
-    "static/js/3.d93fc8e6.chunk.js": "/mereditq.github.io/zothacks2-2-/static/js/3.d93fc8e6.chunk.js",
-    "static/js/3.d93fc8e6.chunk.js.map": "/mereditq.github.io/zothacks2-2-/static/js/3.d93fc8e6.chunk.js.map",
-    "index.html": "/mereditq.github.io/zothacks2-2-/index.html",
-    "static/css/main.d2efb853.chunk.css.map": "/mereditq.github.io/zothacks2-2-/static/css/main.d2efb853.chunk.css.map",
-    "static/js/2.544d636f.chunk.js.LICENSE.txt": "/mereditq.github.io/zothacks2-2-/static/js/2.544d636f.chunk.js.LICENSE.txt",
-    "static/media/x_cross.adfca78c.png": "/mereditq.github.io/zothacks2-2-/static/media/x_cross.adfca78c.png"
+    "main.css": "/mereditq.github.io/zothacks2020/static/css/main.d2efb853.chunk.css",
+    "main.js": "/mereditq.github.io/zothacks2020/static/js/main.1de22a36.chunk.js",
+    "main.js.map": "/mereditq.github.io/zothacks2020/static/js/main.1de22a36.chunk.js.map",
+    "runtime-main.js": "/mereditq.github.io/zothacks2020/static/js/runtime-main.837f26e7.js",
+    "runtime-main.js.map": "/mereditq.github.io/zothacks2020/static/js/runtime-main.837f26e7.js.map",
+    "static/js/2.544d636f.chunk.js": "/mereditq.github.io/zothacks2020/static/js/2.544d636f.chunk.js",
+    "static/js/2.544d636f.chunk.js.map": "/mereditq.github.io/zothacks2020/static/js/2.544d636f.chunk.js.map",
+    "static/js/3.d93fc8e6.chunk.js": "/mereditq.github.io/zothacks2020/static/js/3.d93fc8e6.chunk.js",
+    "static/js/3.d93fc8e6.chunk.js.map": "/mereditq.github.io/zothacks2020/static/js/3.d93fc8e6.chunk.js.map",
+    "index.html": "/mereditq.github.io/zothacks2020/index.html",
+    "static/css/main.d2efb853.chunk.css.map": "/mereditq.github.io/zothacks2020/static/css/main.d2efb853.chunk.css.map",
+    "static/js/2.544d636f.chunk.js.LICENSE.txt": "/mereditq.github.io/zothacks2020/static/js/2.544d636f.chunk.js.LICENSE.txt",
+    "static/media/x_cross.adfca78c.png": "/mereditq.github.io/zothacks2020/static/media/x_cross.adfca78c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.aad24c4f.js",
+    "static/js/runtime-main.837f26e7.js",
     "static/js/2.544d636f.chunk.js",
     "static/css/main.d2efb853.chunk.css",
     "static/js/main.1de22a36.chunk.js"
