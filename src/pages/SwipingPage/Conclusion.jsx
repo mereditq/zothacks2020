@@ -46,7 +46,7 @@ const Conclusion = ({likedSongs, spotifyApi}) => {
                     <div key={likedSongData.id}>
                         <div class = "lastPlaylist">
                             <p id="id-name"> {likedSongData.name}</p>
-                            <a rel="noopener noreferrer" href={likedSongData.external_urls.spotify}><img id = "album-image" src={likedSongData.album.images[0].url} /></a>
+                            <a rel="noopener noreferrer" href={likedSongData.external_urls.spotify} target="_blank"><img id = "album-image" src={likedSongData.album.images[0].url} /></a>
                             <p class = "artists" id="artists-title"> artist(s) </p>
                             <p class = "artists" id="artists">{likedSongData.artists[0].name}</p>
                             <p class = "album" id="album-title">album</p> 
