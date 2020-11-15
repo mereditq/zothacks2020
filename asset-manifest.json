@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.ea1a6dab.chunk.css",
-    "main.js": "./static/js/main.e3c0658a.chunk.js",
-    "main.js.map": "./static/js/main.e3c0658a.chunk.js.map",
+    "main.css": "./static/css/main.7ed3e121.chunk.css",
+    "main.js": "./static/js/main.a03553c6.chunk.js",
+    "main.js.map": "./static/js/main.a03553c6.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.a7ff0f04.js",
     "runtime-main.js.map": "./static/js/runtime-main.a7ff0f04.js.map",
     "static/js/2.4895170f.chunk.js": "./static/js/2.4895170f.chunk.js",
     "static/js/2.4895170f.chunk.js.map": "./static/js/2.4895170f.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.ea1a6dab.chunk.css.map": "./static/css/main.ea1a6dab.chunk.css.map",
+    "static/css/main.7ed3e121.chunk.css.map": "./static/css/main.7ed3e121.chunk.css.map",
     "static/js/2.4895170f.chunk.js.LICENSE.txt": "./static/js/2.4895170f.chunk.js.LICENSE.txt",
     "static/media/spotify.91a40dc3.png": "./static/media/spotify.91a40dc3.png",
     "static/media/x_cross.adfca78c.png": "./static/media/x_cross.adfca78c.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.a7ff0f04.js",
     "static/js/2.4895170f.chunk.js",
-    "static/css/main.ea1a6dab.chunk.css",
-    "static/js/main.e3c0658a.chunk.js"
+    "static/css/main.7ed3e121.chunk.css",
+    "static/js/main.a03553c6.chunk.js"
   ]
 }
