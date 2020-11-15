@@ -91,8 +91,7 @@ const SwipingPage = () => {
                 // git commit -m "initial commit"
                 // git config --global user.name "ryan yang"
                 // git config --global user.email "youremailyoulogginnedtogithubwith@gmail.com"
-// https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/error-permission-denied-publickey
-                //-------------------------------------------
+
                 spotifyApi.getPlaylist(randomPlaylistId)
                 .then(function(playlistData) {
                     // console.log('User playlist', playlistData);
@@ -149,7 +148,7 @@ const SwipingPage = () => {
         <div className="swiping-page--wrapper">
             <img id = "check-mark" src={CheckMark} alt="green check mark"></img>
             <img id = "x-cross" src={XMark} alt="red x mark"></img>
-            <div id="viewport">
+            <div className="viewport">
 
 				<ul className="stack">
 					{songArray.map(function(songInfo){

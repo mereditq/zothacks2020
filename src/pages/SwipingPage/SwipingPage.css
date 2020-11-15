@@ -74,7 +74,7 @@ img.avatar{
     border-radius: 4px;
 }
 
-#viewport {
+.viewport {
     
     padding: 40px;
     width: 500px; 
@@ -103,7 +103,7 @@ img.avatar{
 */
 
 
-#viewport li {
+.viewport li {
 
     
     overflow:auto;
@@ -131,17 +131,18 @@ img.avatar{
 
     transition: background-color 550ms, color 250ms;
 }
+/*
+.viewport:hover{
 
-#viewport:hover{
-    
-    background: #8ac9e2;
+    background: #6071be;
 }
+*/
 
-#viewport li.in-deck:nth-child(3) {
+.viewport li.in-deck:nth-child(3) {
     top: 2px; transform: translate(2px, 2px) rotate(0.4deg);
 }
 
-#viewport li.in-deck:nth-child(2) {
+.viewport li.in-deck:nth-child(2) {
     top: 4px; transform: translate(-4px, -2px) rotate(-1deg);
 }
 

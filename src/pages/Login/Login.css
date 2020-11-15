@@ -11,8 +11,10 @@
 .login-card { 
 
     /*background:#1db94fc7;*/
-    height: 500px;
-    width: 400px;
+
+    overflow: auto;
+    height: 60vh;
+    width: 40vw;
     
     border-radius: 25px;
     padding: 20px;
@@ -51,10 +53,11 @@ p {
 }
 
 .landing-page-title {
-    /*figure out fonts lol*/
+    
     color: rgba(250, 241, 241, 0.904);
-    font-size: 40px;
-    padding: 20px;
+    font-size: 50px;
+    padding: 20px 20px 5px 20px;
+    font-family: 'Leckerli One', cursive;
 }
 button {
 
@@ -62,21 +65,38 @@ button {
     border-radius: 20px;
     height: 60px;
     width: 250px;
-    box-shadow: 0px 0px 15px 2px rgb(0, 0, 0);
-    padding: 10 px 20px;
+    box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
+    
 
     background-color: #38b457;
     
     font-size: 20px;
     font-weight: 600;
     color: rgba(250, 241, 241, 0.904);
+    font-family: 'Unica One', cursive;
     
     transition: background-color 550ms, color 250ms;
 
 }
+
 #pitch{
+
+    padding: 10px 30px 30px 30px;
+    font-size: 13pt;
+    color: rgba(32, 30, 30, 0.904);
+    font-family: 'Unica One', cursive;
+
+
     
+
 }
+
+#spotify-icon{
+    
+    height: 40px;
+    width: 40px;
+}
+
 button:hover{
     background-color: #298148;
 }

@@ -1,4 +1,5 @@
 import './Login.css';
+import spotify from './images/spotify.png';
 
 const Login = () => {
     function login(){
@@ -15,18 +16,18 @@ const Login = () => {
             <div className="login-card">
 
                 <h1 className="landing-page-title">
-                    Listen & Swipe
+                 Listen & Swipe 
                 </h1>
 
                 <p id="pitch">
                     Ever loved a song so much you wanted to swipe right on it? Here's an app for you! 
-                    With [insert name here], you just need a spotify account and we'll recommend you songs,
+                    With Listen and Swipe, you just need a spotify account and we'll recommend you songs
                     based on your recent playlist history! Swipe the card right if you like the song, and left if you don't.
                     We'll compile the liked songs into a playlist for you on spotify if you'd like!
-                    (Remeber to click on the album cover to get a link to the song).
+                    (Remember to click on the album cover to listen to the song on Spotify).
                 </p>
                 
-                <button onClick={login}>Login to Spotify</button>
+                <button onClick={login}> Login with Spotify </button>
                 
             </div>
         </div>

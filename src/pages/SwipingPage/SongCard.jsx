@@ -6,6 +6,7 @@ const SongCard = ({stack, songInfo}) => {
 
     
     let imgURL = songInfo.album.images[0].url;
+    let artists = songInfo.artists[0].name;
     console.log(songInfo);
 
     useEffect(() => {
@@ -21,7 +22,10 @@ const SongCard = ({stack, songInfo}) => {
             <p id="id-name">{songInfo.name}</p>
             
             <a rel="noopener noreferrer" href={songInfo.external_urls.spotify} target="_blank"><img id="album-covers" src={imgURL} /> </a>
-            <p id="album-name">{songInfo.album.name}</p>
+            <p class = "artists" id="artists-title"> artist(s) </p>
+            <p class = "artists" id="artists">{artists}</p>
+            <p class = "album" id="album-title">album</p> 
+            <p class = "album" id="album-name"> {songInfo.album.name}</p>
             
             
  
