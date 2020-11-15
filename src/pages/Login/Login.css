@@ -1,0 +1,79 @@
+.login--wrapper{
+    
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    text-align:center;
+
+    
+}
+
+.login-card { 
+
+    /*background:#1db94fc7;*/
+    height: 500px;
+    width: 400px;
+    
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0px 0px 25px 5px black;
+
+    background: linear-gradient(270deg, #64d53a, #fd297b);
+    background-size: 400% 400%;
+
+    -webkit-animation: title-card 40s ease infinite;
+    -moz-animation: title-card 40s ease infinite;
+    animation: title-card 40s ease infinite;
+
+}
+
+
+/* used https://www.gradient-animator.com */
+@-webkit-keyframes title-card {
+    0%{background-position:75% 0%}
+    50%{background-position:26% 100%}
+    100%{background-position:75% 0%}
+}
+@-moz-keyframes title-card {
+    0%{background-position:75% 0%}
+    50%{background-position:26% 100%}
+    100%{background-position:75% 0%}
+}
+@keyframes title-card { 
+    0%{background-position:75% 0%}
+    50%{background-position:26% 100%}
+    100%{background-position:75% 0%}
+}
+
+
+p {
+    padding: 20px 30px 40px 30px;
+}
+
+.landing-page-title {
+    /*figure out fonts lol*/
+    color: rgba(250, 241, 241, 0.904);
+    font-size: 40px;
+    padding: 20px;
+}
+button {
+
+    border: none;
+    border-radius: 20px;
+    height: 60px;
+    width: 250px;
+    box-shadow: 0px 0px 15px 2px rgb(0, 0, 0);
+    padding: 10 px 20px;
+
+    background-color: #38b457;
+    
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(250, 241, 241, 0.904);
+    
+    transition: background-color 550ms, color 250ms;
+
+}
+button:hover{
+    background-color: #298148;
+}
