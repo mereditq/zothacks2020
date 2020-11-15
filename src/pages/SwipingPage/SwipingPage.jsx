@@ -1,7 +1,10 @@
 import {useState, useEffect} from 'react';
-import {useLocation} from 'react-router-dom';
-import {Stack} from 'swing';
+import {useLocation, useHistory} from 'react-router-dom';
+import {Stack, Direction} from 'swing';
 import SongCard from './SongCard';
+import Conclusion from './Conclusion';
+import CheckMark from './images/green_check.png';
+import XMark from './images/x_cross.png';
 import './SwipingPage.css';
 
 let SpotifyWebApi = require('spotify-web-api-js');
@@ -11,12 +14,22 @@ const SwipingPage = () => {
     let location = useLocation();
     const [artistInformation, setArtistInformation] = useState(null);
     const [songArray, setSongArray] = useState(null);
+    const [likedSongs, setLikedSongs] = useState([]);
+    let history = useHistory();
     // use the spotify api
     // const [numOfSeenCards, setNumOfSeenCards] = useState(0);
     const stack = Stack();
 
     stack.on('throwout', (event) => {
-        // console.log(event);
+        let swipedDirection = (event.throwDirection == Direction.LEFT ? 'left' : 'right');
+        // if statement if swipedDirection === 'right'
+        if (swipedDirection === 'right'){
+            setLikedSongs([...likedSongs, event.target.id]);
+            
+        }
+        songArray.pop();
+        setSongArray([...songArray]);
+        
         // setNumOfSeenCards(numOfSeenCards + 1);
     });
     stack.on('throwin', (event) => {
@@ -31,48 +44,54 @@ const SwipingPage = () => {
 
     useEffect(() => {
         let firstHashItem = location.hash.split('&')[0];
-        //extract access token frmo the hash (remember to do this)
+        //extract access token from the hash (remember to do this)
         let access_token = firstHashItem.split('=')[1];
+        console.log(access_token)
 
         spotifyApi.setAccessToken(access_token);
 
         spotifyApi.getUserPlaylists().then(
             function (playlistList) {
-                //if (playlistList.items.length == 0){
-                //  setSongArray('empty');
-                //  return;
-                //}
+                
+                if (playlistList.items.length === 0){
+                    setSongArray('empty');
+                    return;
+                }
+                
                 // check playlist length
-                // setSongArray('empty')
                 // console.log('user playlist list', playlistList);
                 // extract a random playlist id and set randomPlaylistID to it
                 let possiblePlaylistIndeces = playlistList.items.length;
 
-                let allPlaylistsEmpty = true;
-                for (let i = 0; i < possiblePlaylistIndeces; i++)
+                let randomPlaylistId = null;
+                for (let index = 0; index < possiblePlaylistIndeces; ++index)
                 {
-                    if (playlistList.items[i].tracks.total > 0)
+                    if (playlistList.items[index].tracks.total > 0)
                     {
-                        allPlaylistsEmpty = false;
+                        randomPlaylistId = playlistList.items[index].id;
                         break;
                     }
                 }
                 
-                let randomPlaylistId;
-                if (allPlaylistsEmpty){
+                // let randomPlaylistId;
+                if (randomPlaylistId === null){
                 // gets top songs
                     randomPlaylistId = "37i9dQZEVXbMDoHDwVN2tF";
                 }
-                else{
+                /*else{
                     
                     let selectedIndex = Math.floor(Math.random() * possiblePlaylistIndeces);
                     do{
                         selectedIndex = Math.floor(Math.random() * possiblePlaylistIndeces);
                     } while (playlistList.items[selectedIndex].tracks.total = 0);
                 }
-                    randomPlaylistId = playlistList.items[selectedIndex].id;
-
-
+                    randomPlaylistId = playlistList.items[selectedIndex].id;*/
+                // git init .
+                // git add .
+                // git commit -m "initial commit"
+                // git config --global user.name "ryan yang"
+                // git config --global user.email "youremailyoulogginnedtogithubwith@gmail.com"
+// https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/error-permission-denied-publickey
                 //-------------------------------------------
                 spotifyApi.getPlaylist(randomPlaylistId)
                 .then(function(playlistData) {
@@ -94,10 +113,12 @@ const SwipingPage = () => {
                     // right here
                     spotifyApi.getRecommendations({
                         min_energy: 0.4,
-                        seed_artists: artistIDs,
+                        seed_artists: artistIDs.slice(0,4),
                         min_popularity: 50
                     }).then(function(data) {
                         setArtistInformation(data);
+                    }).catch(function(err){
+                        console.log(err);
                     });
                 }, function(err) {
                     console.error(err);
@@ -106,7 +127,10 @@ const SwipingPage = () => {
             function (err) {
                 console.error(err);
                 // print out the error message
-                // if (err === 'token-expired') // redirect to home
+                if (err.statusText === 'Unauthorized') {
+                    history.push('/')
+                }
+                // redirect to home
             }
         );
     }, []);
@@ -115,14 +139,16 @@ const SwipingPage = () => {
         if(artistInformation === null || artistInformation === 'empty') return;
         console.log("ARTISTINFORMATION HAS CHANGED", artistInformation);
         setSongArray(artistInformation.tracks);
+        // setSongArray([artistInformation.tracks[0]]);
     }, [artistInformation]);
 
+
     if(songArray === null) return (<div></div>);
-    if(songArray === 'empty') return (<div>yo make a playlist bro</div>);
+    if(songArray === 'empty') return (<div >yo make a playlist bro</div>);
     return (
         <div className="swiping-page--wrapper">
-            <img source="/images/green_check.png" alt="green check mark"></img>
-            <img source="/images/x_cross.png" alt ="red x mark"></img>
+            <img id = "check-mark" src={CheckMark} alt="green check mark"></img>
+            <img id = "x-cross" src={XMark} alt="red x mark"></img>
             <div id="viewport">
 
 				<ul className="stack">
@@ -133,8 +159,10 @@ const SwipingPage = () => {
 					})}
 				</ul>
 			</div>
+            {songArray?.length === 0 && <Conclusion likedSongs={likedSongs}/>}
         </div>
     )
 }
-
+// HOW TO DEPLOY TO GITHUBP AGES
+// https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 export default SwipingPage;

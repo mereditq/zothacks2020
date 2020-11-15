@@ -47,7 +47,7 @@
 
 
 p {
-    padding: 20px 30px 40px 30px;
+    padding: 10px;
 }
 
 .landing-page-title {
@@ -73,6 +73,9 @@ button {
     
     transition: background-color 550ms, color 250ms;
 
+}
+#pitch{
+    
 }
 button:hover{
     background-color: #298148;

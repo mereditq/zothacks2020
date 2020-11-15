@@ -1,4 +1,25 @@
-.song-card--wrapper{
+.song-card--wrapper {
 
-    padding: 40px 20px 40px 20px;
+    padding: 5px;
+}
+
+#album-covers {
+    
+    transform:scale(1);
+    max-height: 300px;
+    max-width: 300px;
+    
+}
+
+#id-name{
+    font-size: 5vh;
+    font-family: 'Unica One', cursive;
+    line-height:3.4vw;
+    
+}
+
+#album-name{
+    font-size: 3.0vh;
+    font-family: 'Unica One', cursive;
+    line-height:3vh;
 }

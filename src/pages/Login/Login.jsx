@@ -15,11 +15,15 @@ const Login = () => {
             <div className="login-card">
 
                 <h1 className="landing-page-title">
-                    Spotify Tinder
+                    Listen & Swipe
                 </h1>
 
-                <p>
-                    Ever loved a song so much you wanted to swipe right on it? lmao. fluff description text hereee.
+                <p id="pitch">
+                    Ever loved a song so much you wanted to swipe right on it? Here's an app for you! 
+                    With [insert name here], you just need a spotify account and we'll recommend you songs,
+                    based on your recent playlist history! Swipe the card right if you like the song, and left if you don't.
+                    We'll compile the liked songs into a playlist for you on spotify if you'd like!
+                    (Remeber to click on the album cover to get a link to the song).
                 </p>
                 
                 <button onClick={login}>Login to Spotify</button>

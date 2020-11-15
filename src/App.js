@@ -5,7 +5,7 @@ import SwipingPage from './pages/SwipingPage/SwipingPage';
 
 function App() {
 	return (
-		<Router>
+		<Router basename={process.env.PUBLIC_URL}>
 			<Route exact path="/">
 				<Login />
 			</Route>
