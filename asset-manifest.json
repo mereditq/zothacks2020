@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/https://mereditq.github.io/static/css/main.d2efb853.chunk.css",
-    "main.js": "/https://mereditq.github.io/static/js/main.1de22a36.chunk.js",
-    "main.js.map": "/https://mereditq.github.io/static/js/main.1de22a36.chunk.js.map",
-    "runtime-main.js": "/https://mereditq.github.io/static/js/runtime-main.029f35a0.js",
-    "runtime-main.js.map": "/https://mereditq.github.io/static/js/runtime-main.029f35a0.js.map",
-    "static/js/2.544d636f.chunk.js": "/https://mereditq.github.io/static/js/2.544d636f.chunk.js",
-    "static/js/2.544d636f.chunk.js.map": "/https://mereditq.github.io/static/js/2.544d636f.chunk.js.map",
-    "static/js/3.d93fc8e6.chunk.js": "/https://mereditq.github.io/static/js/3.d93fc8e6.chunk.js",
-    "static/js/3.d93fc8e6.chunk.js.map": "/https://mereditq.github.io/static/js/3.d93fc8e6.chunk.js.map",
-    "index.html": "/https://mereditq.github.io/index.html",
-    "static/css/main.d2efb853.chunk.css.map": "/https://mereditq.github.io/static/css/main.d2efb853.chunk.css.map",
-    "static/js/2.544d636f.chunk.js.LICENSE.txt": "/https://mereditq.github.io/static/js/2.544d636f.chunk.js.LICENSE.txt",
-    "static/media/x_cross.adfca78c.png": "/https://mereditq.github.io/static/media/x_cross.adfca78c.png"
+    "main.css": "//mereditq.github.io/static/css/main.d2efb853.chunk.css",
+    "main.js": "//mereditq.github.io/static/js/main.1de22a36.chunk.js",
+    "main.js.map": "//mereditq.github.io/static/js/main.1de22a36.chunk.js.map",
+    "runtime-main.js": "//mereditq.github.io/static/js/runtime-main.acd57211.js",
+    "runtime-main.js.map": "//mereditq.github.io/static/js/runtime-main.acd57211.js.map",
+    "static/js/2.544d636f.chunk.js": "//mereditq.github.io/static/js/2.544d636f.chunk.js",
+    "static/js/2.544d636f.chunk.js.map": "//mereditq.github.io/static/js/2.544d636f.chunk.js.map",
+    "static/js/3.d93fc8e6.chunk.js": "//mereditq.github.io/static/js/3.d93fc8e6.chunk.js",
+    "static/js/3.d93fc8e6.chunk.js.map": "//mereditq.github.io/static/js/3.d93fc8e6.chunk.js.map",
+    "index.html": "//mereditq.github.io/index.html",
+    "static/css/main.d2efb853.chunk.css.map": "//mereditq.github.io/static/css/main.d2efb853.chunk.css.map",
+    "static/js/2.544d636f.chunk.js.LICENSE.txt": "//mereditq.github.io/static/js/2.544d636f.chunk.js.LICENSE.txt",
+    "static/media/x_cross.adfca78c.png": "//mereditq.github.io/static/media/x_cross.adfca78c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.029f35a0.js",
+    "static/js/runtime-main.acd57211.js",
     "static/js/2.544d636f.chunk.js",
     "static/css/main.d2efb853.chunk.css",
     "static/js/main.1de22a36.chunk.js"
